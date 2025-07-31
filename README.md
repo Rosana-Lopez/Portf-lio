@@ -37,16 +37,16 @@ A base é composta por quatro tabelas relacionais:
 ## 📊 Visualizações
 
 ### Excel  
-![Excel Gráficos](imagens/excel_graficos.png)
+<img width="3200" height="2400" alt="imagensexcel_graficos png" src="https://github.com/user-attachments/assets/5e461e7a-9a40-447a-8ed8-d6fbff7b2cba" />
 
 ### Power BI  
-![Power BI Gráficos](imagens/powerbi_graficos.png)
+<img width="1600" height="1000" alt="imagenspowerbi_graficos png" src="https://github.com/user-attachments/assets/48a1e656-dcdf-428f-84b6-dfaf865714b4" />
 
 ---
 
 ## 🧠 Exemplos de Consultas SQL
 
-```sql
+sql
 -- 1. Qual produto foi mais vendido?
 SELECT 
     p.nome_produto,
@@ -96,4 +96,8 @@ GROUP BY
     p.categoria
 ORDER BY 
     faturamento DESC;
+
+#Conclusão
+✅ Conclusão
+Este projeto mostra como SQL pode ser aplicado na análise de dados para responder perguntas de negócio e gerar insights valiosos. As visualizações em Excel e Power BI complementam a análise técnica e tornam a comunicação mais clara.
 
