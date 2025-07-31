@@ -46,7 +46,7 @@ A base é composta por quatro tabelas relacionais:
 
 ## 🧠 Exemplos de Consultas SQL
 
-sql
+```sql
 -- 1. Qual produto foi mais vendido?
 SELECT 
     p.nome_produto,
