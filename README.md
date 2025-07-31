@@ -1,14 +1,14 @@
-# Portfólio de Análise de Dados com SQL
+# 📊 Portfólio de Análise de Dados com SQL
 
-## Introdução
+## 💡 Introdução
 
 Este projeto simula uma análise de vendas utilizando uma base de dados fictícia. O objetivo é extrair insights relevantes sobre o comportamento dos clientes, desempenho dos produtos e receita da loja, aplicando consultas SQL para responder perguntas de negócio.
 
 ---
 
-## Base de Dados
+## 📁 Base de Dados
 
-A base de dados é composta por quatro tabelas relacionais:
+A base é composta por quatro tabelas relacionais:
 
 - **clientes**: informações dos clientes (ID, nome, cidade)
 - **produtos**: catálogo de produtos (ID, nome, categoria, preço unitário)
@@ -17,77 +17,38 @@ A base de dados é composta por quatro tabelas relacionais:
 
 ---
 
-## Perguntas de Negócio Respondidas
+## ❓ Perguntas de Negócio Respondidas
 
 - Qual produto foi mais vendido?
 - Qual cliente mais comprou?
 - Qual a receita mensal da loja?
-- Quais produtos não foram vendidos?
 - Qual categoria teve maior faturamento?
 
 ---
 
-## Ferramentas Utilizadas
+## 🛠️ Ferramentas Utilizadas
 
 - SQL (SQLite)
-- Excel para análise e visualização
+- Excel (Tabelas Dinâmicas e Gráficos)
 - Power BI (opcional)
 
 ---
 
-## Exemplos de Queries SQL
+## 📊 Visualizações
+
+### Excel  
+![Excel Gráficos](./<img width="3200" height="2400" alt="imagensexcel_graficos png" src="https://github.com/user-attachments/assets/5e461e7a-9a40-447a-8ed8-d6fbff7b2cba" />
+)
+
+### Power BI  
+![Power BI Gráficos](./<img width="1600" height="1000" alt="imagenspowerbi_graficos png" src="https://github.com/user-attachments/assets/48a1e656-dcdf-428f-84b6-dfaf865714b4" />
+)
+
+---
+
+## 🧠 Exemplos de Consultas SQL
 
 ```sql
--- Produto mais vendido
-SELECT 
-    p.nome_produto,
-    SUM(iv.quantidade) AS total_vendido
-FROM 
-    itens_venda iv
-JOIN 
-    produtos p ON iv.produto_id = p.produto_id
-GROUP BY 
-    p.nome_produto
-ORDER BY 
-    total_vendido DESC
-LIMIT 10;
-
-# 📊 Projeto: Análise de Vendas com SQL
-
-## 💡 Objetivo
-
-Este projeto tem como objetivo explorar os dados de uma loja fictícia para extrair insights relevantes, como produtos mais vendidos, clientes que mais compram e receita mensal. Utilizamos SQL para manipular e analisar os dados, e Excel para criar visualizações gráficas que facilitam a interpretação.
-
----
-
-## 🛠️ Ferramentas Utilizadas
-
-- SQL (SQLite)
-- Excel (Tabelas Dinâmicas e Gráficos)
-- Power BI (opcional)
-
----
-
-## 📁 Estrutura do Projeto
-
-# 📊 Projeto: Análise de Vendas com SQL
-
-## 💡 Objetivo
-
-Este projeto tem como objetivo explorar os dados de uma loja fictícia para extrair insights relevantes, como produtos mais vendidos, clientes que mais compram e receita mensal. Utilizamos SQL para manipular e analisar os dados, e Excel para criar visualizações gráficas que facilitam a interpretação.
-
----
-
-## 🛠️ Ferramentas Utilizadas
-
-- SQL (SQLite)
-- Excel (Tabelas Dinâmicas e Gráficos)
-- Power BI (opcional)
-
----
-
-## 📁 Estrutura do Projeto
-
 -- 1. Qual produto foi mais vendido?
 SELECT 
     p.nome_produto,
@@ -114,8 +75,7 @@ GROUP BY
 ORDER BY 
     total_comprado DESC;
 
--- 3. Qual a receita total por mês?
--- (Formato para SQLite)
+-- 3. Qual a receita mensal da loja?
 SELECT 
     strftime('%Y-%m', v.data_venda) AS mes,
     SUM(v.total_venda) AS receita_mensal
@@ -126,17 +86,7 @@ GROUP BY
 ORDER BY 
     mes;
 
--- 4. Quais produtos não foram vendidos?
-SELECT 
-    p.nome_produto
-FROM 
-    produtos p
-LEFT JOIN 
-    itens_venda iv ON p.produto_id = iv.produto_id
-WHERE 
-    iv.produto_id IS NULL;
-
--- 5. Qual categoria teve mais faturamento?
+-- 4. Qual categoria teve maior faturamento?
 SELECT 
     p.categoria,
     SUM(iv.quantidade * p.preco_unitario) AS faturamento
@@ -148,3 +98,8 @@ GROUP BY
     p.categoria
 ORDER BY 
     faturamento DESC;
+
+#Conclusão
+Este projeto mostra como SQL pode ser aplicado na análise de dados para responder perguntas de negócio e gerar insights valiosos. As visualizações em Excel e Power BI complementam a análise técnica e tornam a comunicação mais clara.
+
+##🔗 Consulte o PDF completo do portfólio e os dados neste repositório.
