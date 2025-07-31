@@ -96,9 +96,4 @@ GROUP BY
     p.categoria
 ORDER BY 
     faturamento DESC;
-✅ Conclusão
-Este projeto mostra como SQL pode ser aplicado na análise de dados para responder perguntas de negócio e gerar insights valiosos. As visualizações em Excel e Power BI complementam a análise técnica e tornam a comunicação mais clara.
-
-🔗 Consulte o PDF completo do portfólio e os dados neste repositório.
-
 
